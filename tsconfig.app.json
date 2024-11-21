@@ -20,7 +20,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true
-  },
-  "include": ["src"]
-}
+    "noUncheckedSideEffectImports": true,
+
+    /* Import alias */
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@/components/*": ["src/components/*"]
+    }
+   },
+   "include": ["src"]
+ }
