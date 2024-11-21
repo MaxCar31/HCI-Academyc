@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { CheckCircle, PlayCircle, FileText, Download, MessageCircle, Video, BookOpen } from 'lucide-react'
+import { CheckCircle, PlayCircle, FileText, Download, Video, BookOpen } from 'lucide-react'
 
 export default function CoursePage() {
-  const [progress, setProgress] = useState(25)
+  const [progress] = useState(25)
 
   const courseContent = [
     {
