@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import { Button } from '@/components/ui/button';
 
 export default function Navbar() {
   return (
@@ -12,12 +11,15 @@ export default function Navbar() {
           </Link>
         </div>
 
-        {/* Perfil de Usuario */}
+        {/* Perfil de Usuario y Selector de Idioma */}
+       
         <div className="flex items-center space-x-4">
+           <select className="bg-transparent text-gray-700 focus:outline-none">
+           <option value="es" className="bg-white text-gray-700 hover:bg-gray-100 focus:bg-gray-200">Español</option>
+           <option value="tr" className="bg-white text-gray-700 hover:bg-gray-100 focus:bg-gray-200">Turco</option>
+          </select>
           <img src="./Curriculum.jpg" alt="Usuario" className="h-8 w-8 rounded-full" />
-          <Button variant="ghost" className="text-slate-700 hover:text-red-600">
-            Mi Perfil
-          </Button>
+      
         </div>
       </div>
     </header>

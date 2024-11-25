@@ -24,7 +24,7 @@ export default function EjercicioSonidos() {
     <div className="max-w-3xl mx-auto p-6">
       {/* Barra de progreso */}
       <div className="mb-8">
-        <Progress value={20} className="h-2 bg-green-100"/>
+        <Progress value={20} className="h-2 bg-gray-100"/>
       </div>
 
       {/* Título del ejercicio */}
@@ -38,7 +38,7 @@ export default function EjercicioSonidos() {
           <p>
             <span className="font-semibold">A:</span> ¿Sabes cómo se pronuncia el sonido{" "}
             <Select value={answers.q1} onValueChange={(value) => handleAnswer("q1", value)}>
-              <SelectTrigger className="w-24 inline-flex border-green-500">
+              <SelectTrigger className="w-24 inline-flex border-gray-500">
                 <SelectValue placeholder=" " />
               </SelectTrigger>
               <SelectContent>
@@ -54,7 +54,7 @@ export default function EjercicioSonidos() {
           <p>
             <span className="font-semibold">B:</span> Sí, y también sé que suena diferente al sonido{" "}
             <Select value={answers.q2} onValueChange={(value) => handleAnswer("q2", value)}>
-              <SelectTrigger className="w-24 inline-flex border-green-500">
+              <SelectTrigger className="w-24 inline-flex border-gray-500">
                 <SelectValue placeholder=" " />
               </SelectTrigger>
               <SelectContent>
@@ -70,7 +70,7 @@ export default function EjercicioSonidos() {
           <p>
             <span className="font-semibold">A:</span> ¿Y sabes cómo identificar el sonido{" "}
             <Select value={answers.q3} onValueChange={(value) => handleAnswer("q3", value)}>
-              <SelectTrigger className="w-24 inline-flex border-green-500">
+              <SelectTrigger className="w-24 inline-flex border-gray-500">
                 <SelectValue placeholder=" " />
               </SelectTrigger>
               <SelectContent>
@@ -92,7 +92,7 @@ export default function EjercicioSonidos() {
           <p>
             <span className="font-semibold">A:</span> Exacto, y también es importante practicar el sonido{" "}
             <Select value={answers.q4} onValueChange={(value) => handleAnswer("q4", value)}>
-              <SelectTrigger className="w-24 inline-flex border-green-500">
+              <SelectTrigger className="w-24 inline-flex border-gray-500">
                 <SelectValue placeholder=" " />
               </SelectTrigger>
               <SelectContent>
@@ -108,7 +108,7 @@ export default function EjercicioSonidos() {
           <p>
             <span className="font-semibold">B:</span> ¡Perfecto! Practicar los sonidos{" "}
             <Select value={answers.q5} onValueChange={(value) => handleAnswer("q5", value)}>
-              <SelectTrigger className="w-24 inline-flex border-green-500">
+              <SelectTrigger className="w-24 inline-flex border-gray-500">
                 <SelectValue placeholder=" " />
               </SelectTrigger>
               <SelectContent>

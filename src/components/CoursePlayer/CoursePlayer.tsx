@@ -1,11 +1,11 @@
 import { useState } from 'react';
-import Navbar from '@/components/sectionsCoursePage/Navbar';
-import VideoPlayer from '@/components/sectionsCoursePage/VideoPlayer';
-import LessonNavigation from '@/components/sectionsCoursePage/LessonNavigation';
-import LessonTabs from '@/components/sectionsCoursePage/LessonTabs';
-import Sidebar from '@/components/sectionsCoursePage/Sidebar';
+import Navbar from '@/components/CoursePlayer/Components/Navbar';
+import VideoPlayer from '@/components/CoursePlayer/Components/VideoPlayer';
+import LessonNavigation from '@/components/CoursePlayer/Components/LessonNavigation';
+import LessonTabs from '@/components/CoursePlayer/Components/LessonTabs';
+import Sidebar from '@/components/CoursePlayer/Components/Sidebar';
 import { courseContent } from '@/data/courseContent';
-import EjercicioSonidos from '@/components/sectionsCoursePage/EjercicioSonidos';
+import EjercicioSonidos from '@/components/CoursePlayer/Components/EjercicioSonidos';
 
 export default function CoursePlayer() {
   const [currentLesson, setCurrentLesson] = useState(courseContent[0].lessons[0]);
