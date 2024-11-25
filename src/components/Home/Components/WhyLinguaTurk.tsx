@@ -1,31 +1,33 @@
-
-import { motion } from "framer-motion"
-import { GlobeIcon, Users, BookOpen, BadgeIcon as Certificate } from 'lucide-react'
-import { Card, CardContent } from "@/components/ui/card"
+import { motion } from "framer-motion";
+import { GlobeIcon, Users, BookOpen, BadgeIcon as Certificate } from 'lucide-react';
+import { Card, CardContent } from "@/components/ui/card";
+import { useTranslation } from 'react-i18next';
 
 export function WhyLinguaTurk() {
+  const { t } = useTranslation();
+
   const features = [
     {
       icon: GlobeIcon,
-      title: "Clases en vivo en español y turco",
-      description: "Clases interactivas con profesores nativos que hablan tanto español como turco, disponibles en horarios flexibles."
+      title: t("whyLinguaTurk.feature1.title"),
+      description: t("whyLinguaTurk.feature1.description")
     },
     {
       icon: Users,
-      title: "Comunidad de aprendizaje",
-      description: "Únete a otros estudiantes turcos que están aprendiendo español. Practica y aprende en grupo."
+      title: t("whyLinguaTurk.feature2.title"),
+      description: t("whyLinguaTurk.feature2.description")
     },
     {
       icon: BookOpen,
-      title: "Contenido especializado",
-      description: "Material didáctico diseñado específicamente para hablantes de turco, con explicaciones en tu idioma."
+      title: t("whyLinguaTurk.feature3.title"),
+      description: t("whyLinguaTurk.feature3.description")
     },
     {
       icon: Certificate,
-      title: "Certificación oficial",
-      description: "Obtén certificados reconocidos que validan tu nivel de español según el Marco Común Europeo (MCER)."
+      title: t("whyLinguaTurk.feature4.title"),
+      description: t("whyLinguaTurk.feature4.description")
     }
-  ]
+  ];
 
   return (
     <section className="bg-gradient-to-b from-white to-slate-50 py-16">
@@ -36,7 +38,7 @@ export function WhyLinguaTurk() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
         >
-          ¿Por qué elegir LinguaTurk?
+          {t('whyLinguaTurk.title')}
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -75,12 +77,10 @@ export function WhyLinguaTurk() {
           transition={{ delay: 0.8 }}
         >
           <p className="text-lg text-slate-600 max-w-2xl mx-auto">
-            Más de 1,000 estudiantes turcos ya están aprendiendo español con nosotros. 
-            Únete a la comunidad de aprendizaje de idiomas más efectiva.
+            {t('whyLinguaTurk.footer')}
           </p>
         </motion.div>
       </div>
     </section>
-  )
+  );
 }
-

@@ -1,0 +1,267 @@
+{
+    "login": "Giriş yap",
+
+    "popularCourses": {
+      "title": "Popüler Kurslar",
+      "description": "Türkçe konuşanlar için özel olarak tasarlanmış en çok talep edilen kurslarımızı keşfedin."
+    },
+    "course1": {
+      "title": "Yeni Başlayanlar için İspanyolca",
+      "description": "Türkçe konuşanlar için tasarlanmış etkileşimli kursumuzla İspanyolca'nın temellerini öğrenin.",
+      "level": "Başlangıç",
+      "duration": "8 hafta"
+    },
+    "course2": {
+      "title": "İleri Düzey Konuşma",
+      "description": "İleri düzey konuşma konuları ve pratik egzersizlerle İspanyolca konuşma akıcılığınızı ve güveninizi artırın.",
+      "level": "İleri",
+      "duration": "6 hafta"
+    },
+    "course3": {
+      "title": "İş için İspanyolca",
+      "description": "İspanyolca konuşulan iş dünyası için özel kelime dağarcığı ve beceriler öğrenin.",
+      "level": "Orta",
+      "duration": "10 hafta"
+    },
+    "students": "öğrenciler",
+    "viewCourse": "Kursu Görüntüle",
+    "viewAllCourses": "Tüm kursları görüntüle",
+
+    "heroSection": {
+        "title": "İspanyolcayı keşfedin",
+        "subtitle": "Türkiye'den",
+        "description": "Türkçe konuşanlar için özel olarak tasarlanmış kurslarla İspanyolca öğrenin",
+        "searchPlaceholder": "Kursları, dersleri veya konuları ara...",
+        "startNow": "Şimdi Başla",
+        "imageAlt": "İspanyolca öğrenen öğrenciler"
+      },
+    
+    "whyLinguaTurk": {
+        "title": "Neden LinguaTurk'ü Seçmelisiniz?",
+        "feature1": {
+        "title": "İspanyolca ve Türkçe Canlı Dersler",
+        "description": "Hem İspanyolca hem de Türkçe konuşan yerli öğretmenlerle etkileşimli dersler, esnek saatlerde mevcuttur."
+        },
+        "feature2": {
+        "title": "Öğrenme Topluluğu",
+        "description": "İspanyolca öğrenen diğer Türk öğrencilerle bir araya gelin. Grup halinde pratik yapın ve öğrenin."
+        },
+        "feature3": {
+        "title": "Özel İçerik",
+        "description": "Türkçe konuşanlar için özel olarak tasarlanmış eğitim materyalleri, kendi dilinizde açıklamalarla."
+        },
+        "feature4": {
+        "title": "Resmi Sertifikasyon",
+        "description": "Avrupa Ortak Dil Referans Çerçevesi (MCER) uyarınca İspanyolca seviyenizi doğrulayan tanınmış sertifikalar alın."
+        },
+        "footer": "1.000'den fazla Türk öğrenci zaten bizimle İspanyolca öğreniyor. En etkili dil öğrenme topluluğuna katılın."
+    },
+    "ctaSection": {
+        "newFeature": "YENİ ÖZELLİK!",
+        "title": "İspanyolca konuşma korkusu artık sorun olmayacak!",
+        "description": "Türkçe bilen iki dilli öğretmenlerimizle güven kazanın, sizi İspanyolca'daki ilk adımlarınızda yönlendirecekler.",
+        "registerNow": "Şimdi Kaydol",
+        "imageAlt": "Canlı İspanyolca dersi"
+      },
+      "teamSection": {
+        "title": "Öğretmenlerimiz",
+        "description": "İspanyolca öğrenme yolculuğunuzda size rehberlik edecek uzmanları tanıyın."
+      },
+      "teamMembers": {
+        "maria": {
+          "name": "Maria Cardenaz",
+          "role": "İspanyolca Öğretmeni",
+          "description": "10 yıldan fazla deneyime sahip İspanyolca öğretim uzmanı."
+        },
+        "daniel": {
+          "name": "Daniel Quispe",
+          "role": "Dilbilgisi Öğretmeni",
+          "description": "İspanyolca dilbilgisi ve uygulamalı dilbilim uzmanı, öğretim konusunda tutkulu."
+        },
+        "emilia": {
+          "name": "Emilia Gonzalez",
+          "role": "Konuşma Öğretmeni",
+          "description": "Öğrencilere akıcılık ve güven kazandıran atölye kolaylaştırıcısı."
+        }
+      },
+      "faqSection": {
+        "title": "Sıkça Sorulan Sorular",
+        "description": "LinguaTurk ile İspanyolca öğrenme hakkında en sık sorulan soruların cevaplarını bulun"
+      },
+      "faq": {
+        "question1": "Türkçe konuşanlar için kurslar nasıl tasarlanmıştır?",
+        "answer1": "Kurslarımız, Türkçe konuşanlar için özel olarak uyarlanmıştır. Türkçe ve İspanyolca yapıları karşılaştıran dilbilgisi açıklamaları, ilgili durumlar için bağlamsal kelime dağarcığı ve Türkçe konuşanlar için genellikle zor olan seslere odaklanan telaffuz alıştırmaları içerir.",
+        "question2": "LinguaTurk ile hangi İspanyolca seviyesine ulaşabilirim?",
+        "answer2": "LinguaTurk ile, Avrupa Dilleri Ortak Çerçeve Programı'na göre başlangıç seviyesinden (A1) ileri seviyeye (C1) kadar ilerleyebilirsiniz. Tüm seviyeler için kurslar sunuyoruz ve resmi İspanyolca sınavlarına hazırlanmanıza yardımcı oluyoruz.",
+        "question3": "Her gün ne kadar süre çalışmam gerekiyor?",
+        "answer3": "Sürekli bir ilerleme için günde en az 30 dakika ayırmanızı öneririz. Ancak, kurslarımız esnektir ve çalışma temponuzu uygunluğunuza göre ayarlayabilirsiniz. Önemli olan öğrenmede tutarlılıktır.",
+        "question4": "Canlı dersler sunuyor musunuz?",
+        "answer4": "Evet, Türkçe de konuşan İspanyolca ana dili öğretmenleri ile canlı dersler sunuyoruz. Bu oturumlar, bağımsız çalışma materyalini tamamlar ve gerçek zamanlı olarak konuşma pratiği yapmanıza ve sorularınızı çözmenize olanak tanır.",
+        "question5": "İspanyolca konuşma pratiğimi nasıl yapabilirim?",
+        "answer5": "Canlı derslerin yanı sıra, konuşma kulüpleri, İspanyolca ana dili konuşanlarla sanal dil değişimleri ve konuşma pratiği yapmanız için ses tanıma teknolojisi ile telaffuz alıştırmaları sunuyoruz."
+      },
+        "footer": {
+          "brand": "LinguaTurk",
+          "description": "Türkçe konuşanlar için özel olarak tasarlanmış kurslarla İspanyolca öğrenin",
+          "contact": {
+            "phone": "+012 (345) 678 99"
+          },
+          "resources": {
+            "header": "Kaynaklar",
+            "links": {
+              "development": "SaaS Geliştirme",
+              "products": "Ürünlerimiz",
+              "userFlow": "Kullanıcı Akışı",
+              "userStrategy": "Kullanıcı Stratejisi"
+            }
+          },
+          "company": {
+            "header": "Şirket",
+            "links": {
+              "about": "TailGrids Hakkında",
+              "contactSupport": "İletişim ve Destek",
+              "success": "Başarı Hikayeleri",
+              "privacy": "Ayarlar ve Gizlilik"
+            }
+          },
+          "quickLinks": {
+            "header": "Hızlı Bağlantılar",
+            "links": {
+              "premiumSupport": "Premium Destek",
+              "services": "Hizmetlerimiz",
+              "team": "Ekibimizi Tanıyın",
+              "download": "Uygulamayı İndirin"
+            }
+          },
+          "followUs": {
+            "header": "Bizi Takip Edin",
+            "copyright": "© 2025 TailGrids"
+          }
+        },
+        "registerPage": {
+            "brand": "LinguaTurk",
+            "registerWithGoogle": "Google ile Kayıt Ol",
+            "registerWithGitHub": "GitHub ile Kayıt Ol",
+            "orRegisterWithEmail": "Veya e-posta ile kayıt olun",
+            "emailPlaceholder": "E-posta Adresi",
+            "passwordPlaceholder": "Şifre",
+            "registerButton": "Kayıt Ol",
+            "terms": "Kayıt olarak şu koşulları kabul etmiş olursunuz",
+            "termsOfService": "Hizmet Şartları",
+            "privacyPolicy": "Gizlilik Politikası",
+            "and": "ve",
+            "logoAlt": "Logo"
+          },
+            "courseOverview": {
+              "title": "Yeni Başlayanlar için İspanyolca: Sıfırdan Konuşmaya",
+              "description": "Bu kurs, sıfırdan İspanyolca öğrenmek isteyen Türkçe konuşanlar için tasarlanmıştır. Etkileşimli dersler, pratik alıştırmalar ve multimedya kaynakları aracılığıyla İspanyolca'da temel beceriler geliştireceksiniz.",
+              "lastUpdated": "Mart 2024",
+              "language": "Türkçe (İspanyolca altyazılı)",
+              "duration": "30 saat",
+              "instructor": "Daniel Quispe"
+            },
+            "courseContent": {
+              "introduction": {
+                "title": "İspanyolcaya Giriş",
+                "lessons": {
+                  "lesson1": { "title": "Kursa Hoş Geldiniz ve Hedefler" },
+                  "lesson2": { "title": "İspanyol Alfabesi ve Temel Telaffuz" },
+                  "lesson3": { "title": "Özel Sesler ve Türkçe ile Karşılaştırmalar" },
+                  "lesson4": { "title": "Pratik Telaffuz Alıştırması" }
+                }
+              },
+              "greetings": {
+                "title": "Selamlaşmalar ve Tanışmalar",
+                "lessons": {
+                  "lesson1": { "title": "Resmi ve Gayri Resmi Selamlaşmalar ve Vedalar" },
+                  "lesson2": { "title": "Kendini ve Başkalarını Tanıtma" },
+                  "lesson3": { "title": "Kişisel Zamirler ve Ser/Estar Fiilleri" },
+                  "lesson4": { "title": "Pratik Diyaloglar ve Rol Oynama" }
+                }
+              },
+              "numbers": {
+                "title": "Sayılar, Tarihler ve Saatler",
+                "lessons": {
+                  "lesson1": { "title": "0'dan 100'e Kadar Sayılar" },
+                  "lesson2": { "title": "Tarihler, Haftanın Günleri ve Aylar" },
+                  "lesson3": { "title": "Saat Söyleme ve Zaman İfadeleri" }
+                }
+              },
+              "vocabulary": {
+                "title": "Temel Kelime Bilgisi ve Günlük İfadeler",
+                "lessons": {
+                  "lesson1": { "title": "Renkler, Şekiller ve Boyutlar" },
+                  "lesson2": { "title": "Aile ve İlişkiler" },
+                  "lesson3": { "title": "Yiyecek ve İçecekler" },
+                  "lesson4": { "title": "Pratik Alıştırmalar ve Kelime Oyunları" }
+                }
+              },
+              "grammar": {
+                "title": "Temel Dilbilgisi",
+                "lessons": {
+                  "lesson1": { "title": "Belirli ve Belirsiz Artikeller" },
+                  "lesson2": { "title": "İsimlerin Cinsiyeti ve Sayısı" },
+                  "lesson3": { "title": "Niteleyici ve Sahiplik Sıfatları" },
+                  "lesson4": { "title": "İsimler ve Sıfatlar Arasındaki Uyum" }
+                }
+              },
+              "verbs": {
+                "title": "Temel Fiiller ve Çekimler",
+                "lessons": {
+                  "lesson1": { "title": "Şimdiki Zamanda Düzenli Fiiller (-ar, -er, -ir)" },
+                  "lesson2": { "title": "Yaygın Düzensiz Fiiller (ser, estar, tener, ir)" },
+                  "lesson3": { "title": "Olumlu, Olumsuz ve Soru Cümleleri" },
+                  "lesson4": { "title": "Çekim Pratiği ve Yazılı Alıştırmalar" }
+                }
+              },
+              "communication": {
+                "title": "Günlük Durumlarda İletişim",
+                "lessons": {
+                  "lesson1": { "title": "Restoranda: Yemek Siparişi Verme" },
+                  "lesson2": { "title": "Alışveriş ve Fiyatlar" },
+                  "lesson3": { "title": "Yönler ve Ulaşım" },
+                  "lesson4": { "title": "Gerçek Durumlarda Rol Oynama" }
+                }
+              },
+              "reading": {
+                "title": "Temel Okuma ve Yazma",
+                "lessons": {
+                  "lesson1": { "title": "Basit Metinler Okuma" },
+                  "lesson2": { "title": "Okuduğunu Anlama ve Kelime Bilgisi" },
+                  "lesson3": { "title": "Basit Cümleler ve Paragraflar Yazma" },
+                  "lesson4": { "title": "Düzeltme ve Geri Bildirim" }
+                }
+              },
+              "evaluation": {
+                "title": "Kursun Değerlendirilmesi ve Kapanışı",
+                "lessons": {
+                  "lesson1": { "title": "Genel Tekrar ve Soruların Açıklanması" },
+                  "lesson2": { "title": "Final Değerlendirmesi ve Sertifikasyon" }
+                }
+              }
+            },
+            "enrollmentCard": {
+                "title": "Bugün öğrenmeye başlayın",
+                "description": "Kursa tam erişim",
+                "completed": "tamamlandı",
+                "continueLearning": "Öğrenmeye devam et",
+                "moneyBackGuarantee": "30 gün para iade garantisi"
+              },
+              "courseOverview1": {
+                "students": "öğrenciler",
+                "updated": "Güncellendi",
+                "instructor": "Eğitmen"
+              },
+              "courseDetailsTabs": {
+                "description": "Kurs Tanımı",
+                "content": "Kurs İçeriği",
+                "whatYouWillLearn": "Öğrenecekleriniz",
+                "learn1": "İspanyolca telaffuzun temelleri",
+                "learn2": "Günlük konuşmalar için temel kelime bilgisi",
+                "learn3": "Basit cümleler kurmak için temel dilbilgisi",
+                "learn4": "Dinleme ve konuşma becerileri"
+              }
+          
+        
+    }
+  

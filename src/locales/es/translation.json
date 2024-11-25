@@ -1,0 +1,265 @@
+{
+    "login": "Registrarse",
+
+    "popularCourses": {
+      "title": "Cursos Populares",
+      "description": "Descubre nuestros cursos más solicitados, diseñados específicamente para hablantes de turco que desean aprender español."
+    },
+    "course1": {
+      "title": "Español para Principiantes",
+      "description": "Domina los fundamentos del español con nuestro curso interactivo diseñado para hablantes de turco.",
+      "level": "Principiante",
+      "duration": "8 semanas"
+    },
+    "course2": {
+      "title": "Conversación Avanzada",
+      "description": "Mejora tu fluidez y confianza al hablar español con temas de conversación avanzados y ejercicios prácticos.",
+      "level": "Avanzado",
+      "duration": "6 semanas"
+    },
+    "course3": {
+      "title": "Español para Negocios",
+      "description": "Aprende vocabulario y habilidades específicas para el mundo empresarial hispanohablante.",
+      "level": "Intermedio",
+      "duration": "10 semanas"
+    },
+    "students": "estudiantes",
+    "viewCourse": "Ver Curso",
+    "viewAllCourses": "Ver todos los cursos",
+
+    "heroSection": {
+        "title": "Descubre el español",
+        "subtitle": "desde Turquía",
+        "description": "Aprende español con cursos diseñados específicamente para hablantes de turco",
+        "searchPlaceholder": "Buscar cursos, lecciones, o temas...",
+        "startNow": "Empieza Ahora",
+        "imageAlt": "Estudiantes aprendiendo español"
+      },
+      "whyLinguaTurk": {
+        "title": "¿Por qué elegir LinguaTurk?",
+        "feature1": {
+          "title": "Clases en vivo en español y turco",
+          "description": "Clases interactivas con profesores nativos que hablan tanto español como turco, disponibles en horarios flexibles."
+        },
+        "feature2": {
+          "title": "Comunidad de aprendizaje",
+          "description": "Únete a otros estudiantes turcos que están aprendiendo español. Practica y aprende en grupo."
+        },
+        "feature3": {
+          "title": "Contenido especializado",
+          "description": "Material didáctico diseñado específicamente para hablantes de turco, con explicaciones en tu idioma."
+        },
+        "feature4": {
+          "title": "Certificación oficial",
+          "description": "Obtén certificados reconocidos que validan tu nivel de español según el Marco Común Europeo (MCER)."
+        },
+        "footer": "Más de 1,000 estudiantes turcos ya están aprendiendo español con nosotros. Únete a la comunidad de aprendizaje de idiomas más efectiva."
+      },
+      "ctaSection": {
+        "newFeature": "¡NUEVA FUNCIÓN!",
+        "title": "¡El miedo a hablar español ya no será un problema!",
+        "description": "Gana confianza con nuestros profesores bilingües, quienes te guiarán en tus primeros pasos en español desde el turco.",
+        "registerNow": "Regístrate Ahora",
+        "imageAlt": "Clase en vivo de español"
+      },
+      "teamSection": {
+        "title": "Nuestros Profesores",
+        "description": "Conoce a los expertos que te guiarán en tu camino para aprender español."
+      },
+      "teamMembers": {
+        "maria": {
+          "name": "Maria Cardenaz",
+          "role": "Profesora de Español",
+          "description": "Especialista en enseñanza del español con más de 10 años de experiencia."
+        },
+        "daniel": {
+          "name": "Daniel Quispe",
+          "role": "Profesor de Gramática",
+          "description": "Experto en gramática española y lingüística aplicada, apasionado por la enseñanza."
+        },
+        "emilia": {
+          "name": "Emilia Gonzalez",
+          "role": "Profesora de Conversación",
+          "description": "Facilitadora de talleres, ayudando a los estudiantes a ganar fluidez y confianza."
+        }
+      },
+      "faqSection": {
+        "title": "Preguntas Frecuentes",
+        "description": "Encuentra respuestas a las preguntas más comunes sobre aprender español con LinguaTurk"
+      },
+      "faq": {
+        "question1": "¿Cómo están diseñados los cursos para hablantes de turco?",
+        "answer1": "Nuestros cursos están específicamente adaptados para hablantes de turco, con explicaciones gramaticales que comparan estructuras turcas y españolas, vocabulario contextualizado para situaciones relevantes, y ejercicios de pronunciación que se centran en los sonidos que suelen ser difíciles para los hablantes de turco.",
+        "question2": "¿Qué nivel de español puedo alcanzar con LinguaTurk?",
+        "answer2": "Con LinguaTurk, puedes progresar desde un nivel principiante (A1) hasta un nivel avanzado (C1) según el Marco Común Europeo de Referencia para las lenguas. Ofrecemos cursos para todos los niveles y te ayudamos a prepararte para exámenes oficiales de español.",
+        "question3": "¿Cuánto tiempo necesito dedicar al estudio cada día?",
+        "answer3": "Recomendamos dedicar al menos 30 minutos diarios para un progreso constante. Sin embargo, nuestros cursos son flexibles y puedes adaptar tu ritmo de estudio según tu disponibilidad. Lo importante es la consistencia en el aprendizaje.",
+        "question4": "¿Ofrecen clases en vivo con profesores?",
+        "answer4": "Sí, ofrecemos clases en vivo con profesores nativos de español que también hablan turco. Estas sesiones complementan el material de estudio autónomo y te permiten practicar la conversación y resolver dudas en tiempo real.",
+        "question5": "¿Cómo puedo practicar mi español hablado?",
+        "answer5": "Además de las clases en vivo, ofrecemos clubes de conversación, intercambios de idiomas virtuales con hablantes nativos de español, y ejercicios de pronunciación con tecnología de reconocimiento de voz para que puedas practicar tu español hablado de diversas formas."
+      },
+        "footer": {
+          "brand": "LinguaTurk",
+          "description": "Aprende español con cursos diseñados específicamente para hablantes de turco",
+          "contact": {
+            "phone": "+012 (345) 678 99"
+          },
+          "resources": {
+            "header": "Recursos",
+            "links": {
+              "development": "Desarrollo SaaS",
+              "products": "Nuestros Productos",
+              "userFlow": "Flujo de Usuario",
+              "userStrategy": "Estrategia de Usuario"
+            }
+          },
+          "company": {
+            "header": "Empresa",
+            "links": {
+              "about": "Sobre TailGrids",
+              "contactSupport": "Contacto y Soporte",
+              "success": "Historias de Éxito",
+              "privacy": "Configuración y Privacidad"
+            }
+          },
+          "quickLinks": {
+            "header": "Enlaces Rápidos",
+            "links": {
+              "premiumSupport": "Soporte Premium",
+              "services": "Nuestros Servicios",
+              "team": "Conoce Nuestro Equipo",
+              "download": "Descarga la App"
+            }
+          },
+          "followUs": {
+            "header": "Síguenos en",
+            "copyright": "© 2025 TailGrids"
+          }
+        },
+        "registerPage": {
+            "brand": "LinguaTurk",
+            "registerWithGoogle": "Regístrate con Google",
+            "registerWithGitHub": "Regístrate con GitHub",
+            "orRegisterWithEmail": "O regístrate con tu correo electrónico",
+            "emailPlaceholder": "Correo Electrónico",
+            "passwordPlaceholder": "Contraseña",
+            "registerButton": "Registrarse",
+            "terms": "Al registrarte, aceptas los",
+            "termsOfService": "Términos de Servicio",
+            "privacyPolicy": "Política de Privacidad",
+            "and": "y la",
+            "logoAlt": "Logo"
+          },
+          
+            "courseOverview": {
+              "title": "Español para principiantes: De cero a conversación",
+              "description": "Este curso está diseñado para hablantes de turco que desean aprender español desde cero. A través de lecciones interactivas, ejercicios prácticos y recursos multimedia, desarrollarás habilidades fundamentales en español.",
+              "lastUpdated": "Marzo 2024",
+              "language": "Turco (con subtítulos en español)",
+              "duration": "30 horas",
+              "instructor": "Daniel Quispe"
+            },
+            "courseContent": {
+              "introduction": {
+                "title": "Introducción al Español",
+                "lessons": {
+                  "lesson1": { "title": "Bienvenida al curso y objetivos" },
+                  "lesson2": { "title": "El alfabeto español y pronunciación básica" },
+                  "lesson3": { "title": "Sonidos especiales y comparaciones con el turco" },
+                  "lesson4": { "title": "Ejercicio práctico de pronunciación" }
+                }
+              },
+              "greetings": {
+                "title": "Saludos y Presentaciones",
+                "lessons": {
+                  "lesson1": { "title": "Saludos y despedidas formales e informales" },
+                  "lesson2": { "title": "Presentarse y presentar a otros" },
+                  "lesson3": { "title": "Pronombres personales y verbos ser/estar" },
+                  "lesson4": { "title": "Diálogos prácticos y role-play" }
+                }
+              },
+              "numbers": {
+                "title": "Números, Fechas y Horas",
+                "lessons": {
+                  "lesson1": { "title": "Números del 0 al 100" },
+                  "lesson2": { "title": "Fechas, días de la semana y meses" },
+                  "lesson3": { "title": "Decir la hora y expresiones temporales" }
+                }
+              },
+              "vocabulary": {
+                "title": "Vocabulario Básico y Expresiones Cotidianas",
+                "lessons": {
+                  "lesson1": { "title": "Colores, formas y tamaños" },
+                  "lesson2": { "title": "Familia y relaciones" },
+                  "lesson3": { "title": "Comida y bebida" },
+                  "lesson4": { "title": "Ejercicios prácticos y juegos de vocabulario" }
+                }
+              },
+              "grammar": {
+                "title": "Gramática Fundamental",
+                "lessons": {
+                  "lesson1": { "title": "Artículos definidos e indefinidos" },
+                  "lesson2": { "title": "Género y número de los sustantivos" },
+                  "lesson3": { "title": "Adjetivos calificativos y posesivos" },
+                  "lesson4": { "title": "Concordancia entre sustantivos y adjetivos" }
+                }
+              },
+              "verbs": {
+                "title": "Verbos y Conjugaciones Básicas",
+                "lessons": {
+                  "lesson1": { "title": "Verbos regulares en presente (-ar, -er, -ir)" },
+                  "lesson2": { "title": "Verbos irregulares comunes (ser, estar, tener, ir)" },
+                  "lesson3": { "title": "Oraciones afirmativas, negativas e interrogativas" },
+                  "lesson4": { "title": "Práctica de conjugación y ejercicios escritos" }
+                }
+              },
+              "communication": {
+                "title": "Comunicación en Situaciones Cotidianas",
+                "lessons": {
+                  "lesson1": { "title": "En el restaurante: ordenar comida" },
+                  "lesson2": { "title": "Compras y precios" },
+                  "lesson3": { "title": "Direcciones y transporte" },
+                  "lesson4": { "title": "Role-play de situaciones reales" }
+                }
+              },
+              "reading": {
+                "title": "Lectura y Escritura Básica",
+                "lessons": {
+                  "lesson1": { "title": "Lectura de textos sencillos" },
+                  "lesson2": { "title": "Comprensión lectora y vocabulario" },
+                  "lesson3": { "title": "Redacción de oraciones y párrafos simples" },
+                  "lesson4": { "title": "Corrección y retroalimentación" }
+                }
+              },
+              "evaluation": {
+                "title": "Evaluación y Cierre del Curso",
+                "lessons": {
+                  "lesson1": { "title": "Repaso general y aclaración de dudas" },
+                  "lesson2": { "title": "Evaluación final y certificación" }
+                }
+              }
+            },
+            "enrollmentCard": {
+                "title": "Comienza tu aprendizaje hoy",
+                "description": "Acceso completo al curso",
+                "completed": "completado",
+                "continueLearning": "Continuar aprendiendo",
+                "moneyBackGuarantee": "30 días de garantía de devolución del dinero"
+            },
+            "courseOverview1": {
+                "students": "estudiantes",
+                "updated": "Actualizado",
+                "instructor": "Instructor"
+            },
+            "courseDetailsTabs": {
+                "description": "Descripción del curso",
+                "content": "Contenido del curso",
+                "whatYouWillLearn": "Lo que aprenderás",
+                "learn1": "Fundamentos de la pronunciación española",
+                "learn2": "Vocabulario esencial para conversaciones cotidianas",
+                "learn3": "Gramática básica para construir oraciones simples",
+                "learn4": "Habilidades de comprensión auditiva y expresión oral"
+            }
+      
+  }

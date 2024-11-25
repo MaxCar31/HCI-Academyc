@@ -1,19 +1,25 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from "react-i18next";
 
 const RegisterPage: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="min-h-screen bg-slate-50 text-gray-900 flex justify-center">
       <div className="max-w-screen-xl m-0 sm:m-10 bg-white shadow sm:rounded-lg flex justify-center flex-1">
         <div className="lg:w-1/2 xl:w-5/12 p-6 sm:p-12">
           <div>
-          <h1 className="text-3xl font-serif font-bold text-red-600 text-center" >LinguaTurk</h1>
+            <h1 className="text-3xl font-serif font-bold text-red-600 text-center">
+              {t("registerPage.brand")}
+            </h1>
           </div>
           <div className="mt-12 flex flex-col items-center">
             <div className="w-full flex-1 mt-8">
               <div className="flex flex-col items-center">
                 <button className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-red-100 text-red-600 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow hover:bg-red-200">
                   <div className="bg-white p-2 rounded-full">
+                    {/* Google Logo */}
                     <svg className="w-4" viewBox="0 0 533.5 544.3">
                       <path
                         d="M533.5 278.4c0-18.5-1.5-37.1-4.7-55.3H272.1v104.8h147c-6.1 33.8-25.7 63.7-54.4 82.7v68h87.7c51.5-47.4 81.1-117.4 81.1-200.2z"
@@ -33,11 +39,12 @@ const RegisterPage: React.FC = () => {
                       />
                     </svg>
                   </div>
-                  <span className="ml-4">Regístrate con Google</span>
+                  <span className="ml-4">{t("registerPage.registerWithGoogle")}</span>
                 </button>
 
                 <button className="w-full max-w-xs font-bold shadow-sm rounded-lg py-3 bg-slate-100 text-slate-700 flex items-center justify-center transition-all duration-300 ease-in-out focus:outline-none hover:shadow hover:bg-slate-200 mt-5">
                   <div className="bg-white p-1 rounded-full">
+                    {/* GitHub Logo */}
                     <svg className="w-6" viewBox="0 0 32 32">
                       <path
                         fillRule="evenodd"
@@ -45,13 +52,13 @@ const RegisterPage: React.FC = () => {
                       />
                     </svg>
                   </div>
-                  <span className="ml-4">Regístrate con GitHub</span>
+                  <span className="ml-4">{t("registerPage.registerWithGitHub")}</span>
                 </button>
               </div>
 
               <div className="my-12 border-b text-center">
                 <div className="leading-none px-2 inline-block text-sm text-slate-500 tracking-wide font-medium bg-white transform translate-y-1/2">
-                  O regístrate con tu correo electrónico
+                  {t("registerPage.orRegisterWithEmail")}
                 </div>
               </div>
 
@@ -59,26 +66,26 @@ const RegisterPage: React.FC = () => {
                 <input
                   className="w-full px-8 py-4 rounded-lg font-medium bg-slate-100 border border-slate-300 placeholder-slate-500 text-sm focus:outline-none focus:border-red-400 focus:bg-white"
                   type="email"
-                  placeholder="Correo Electrónico"
+                  placeholder={t("registerPage.emailPlaceholder")}
                 />
                 <input
                   className="w-full px-8 py-4 rounded-lg font-medium bg-slate-100 border border-slate-300 placeholder-slate-500 text-sm focus:outline-none focus:border-red-400 focus:bg-white mt-5"
                   type="password"
-                  placeholder="Contraseña"
+                  placeholder={t("registerPage.passwordPlaceholder")}
                 />
                 <Link to="/CoursePage">
                   <button className="mt-5 tracking-wide font-semibold bg-red-600 text-white w-full py-4 rounded-lg hover:bg-red-700 transition-all duration-300 ease-in-out flex items-center justify-center focus:shadow-outline focus:outline-none">
-                    <span className="ml-3">Registrarse</span>
+                    <span className="ml-3">{t("registerPage.registerButton")}</span>
                   </button>
                 </Link>
                 <p className="mt-6 text-xs text-slate-500 text-center">
-                  Al registrarte, aceptas los{" "}
+                  {t("registerPage.terms")}{" "}
                   <a href="#" className="border-b border-slate-500 border-dotted">
-                    Términos de Servicio
+                    {t("registerPage.termsOfService")}
                   </a>{" "}
-                  y la{" "}
+                  {t("registerPage.and")}{" "}
                   <a href="#" className="border-b border-slate-500 border-dotted">
-                    Política de Privacidad
+                    {t("registerPage.privacyPolicy")}
                   </a>.
                 </p>
               </div>
@@ -86,7 +93,7 @@ const RegisterPage: React.FC = () => {
           </div>
         </div>
         <div className="flex-1 bg-red-100 text-center hidden lg:flex">
-        <img src="./Login2.png" alt="Logo" />
+          <img src="./Login2.png" alt={t("registerPage.logoAlt")} />
         </div>
       </div>
     </div>

@@ -1,12 +1,14 @@
-import { useState } from "react"
-import { motion } from "framer-motion"
-import { Search } from 'lucide-react'
-import { Input } from "@/components/ui/input"
-import { Button } from "@/components/ui/button"
-import { Link } from "react-router-dom"
+import { useState } from "react";
+import { motion } from "framer-motion";
+import { Search } from 'lucide-react';
+import { Input } from "@/components/ui/input";
+import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 export function HeroSection() {
-  const [searchTerm, setSearchTerm] = useState("")
+  const { t } = useTranslation();
+  const [searchTerm, setSearchTerm] = useState("");
 
   return (
     <section className="py-20 bg-gradient-to-br from-red-50 via-white to-blue-50 overflow-hidden">
@@ -19,17 +21,18 @@ export function HeroSection() {
             transition={{ duration: 0.5 }}
           >
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-slate-800 mb-6 leading-tight">
-              Descubre el español<br />
-              <span className="text-red-600">desde Turquía</span>
+              {t('heroSection.title')}
+              <br />
+              <span className="text-red-600">{t('heroSection.subtitle')}</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8">
-              Aprende español con cursos diseñados específicamente para hablantes de turco
+              {t('heroSection.description')}
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <div className="relative flex-grow">
                 <Input
                   type="text"
-                  placeholder="Buscar cursos, lecciones, o temas..."
+                  placeholder={t('heroSection.searchPlaceholder')}
                   className="pl-10 pr-4 py-3 w-full text-lg"
                   value={searchTerm}
                   onChange={(e) => setSearchTerm(e.target.value)}
@@ -37,9 +40,10 @@ export function HeroSection() {
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-slate-400" />
               </div>
               <Link to="/Login">
-              <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg">
-                Empieza Ahora
-              </Button></Link>
+                <Button className="bg-red-600 hover:bg-red-700 text-white px-8 py-3 text-lg">
+                  {t('heroSection.startNow')}
+                </Button>
+              </Link>
             </div>
           </motion.div>
           <motion.div 
@@ -51,14 +55,13 @@ export function HeroSection() {
             <div className="relative">
               <img 
                 src="/EstudiantesTurcos.png" 
-                alt="Estudiantes aprendiendo español" 
-                className="rounded-lg  max-w-xl ml-10"
+                alt={t('heroSection.imageAlt')} 
+                className="rounded-lg max-w-xl ml-10"
               />
             </div>
           </motion.div>
         </div>
       </div>
     </section>
-  )
+  );
 }
-

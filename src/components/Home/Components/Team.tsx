@@ -1,39 +1,43 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 
 const teamMembers = [
   {
-    name: "Maria Cardenaz",
-    role: "Profesora de Español",
-    description: "Especialista en enseñanza del español con más de 10 años de experiencia.",
+    name: "teamMembers.maria.name",
+    role: "teamMembers.maria.role",
+    description: "teamMembers.maria.description",
     imageUrl: "InstructorHome1.jpg",
     linkedinUrl: "#",
     instagramUrl: "#",
   },
   {
-    name: "Daniel Quispe",
-    role: "Profesor de Gramática",
-    description: "Experto en gramática española y lingüística aplicada, apasionado por la enseñanza.",
+    name: "teamMembers.daniel.name",
+    role: "teamMembers.daniel.role",
+    description: "teamMembers.daniel.description",
     imageUrl: "InstructorHome2.png",
     linkedinUrl: "#",
     instagramUrl: "#",
   },
   {
-    name: "Emilia Gonzalez",
-    role: "Profesora de Conversación",
-    description: "Facilitadora de talleres, ayudando a los estudiantes a ganar fluidez y confianza.",
+    name: "teamMembers.emilia.name",
+    role: "teamMembers.emilia.role",
+    description: "teamMembers.emilia.description",
     imageUrl: "InstructorHome3.jpg",
     linkedinUrl: "#",
     instagramUrl: "#",
   },
 ];
+
 const TeamSection: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-white py-24" id="team">
       <div className="container mx-auto px-6">
         {/* Section Header */}
         <div className="text-center mb-12 animate-fade-in">
-          <h2 className="text-4xl font-bold text-gray-900">Nuestros Profesores</h2>
-          <p className="text-gray-700 mt-4">Conoce a los expertos que te guiarán en tu camino para aprender español.</p>
+          <h2 className="text-4xl font-bold text-gray-900">{t('teamSection.title')}</h2>
+          <p className="text-gray-700 mt-4">{t('teamSection.description')}</p>
         </div>
 
         {/* Profesores */}
@@ -43,12 +47,12 @@ const TeamSection: React.FC = () => {
               <div key={index} className={`w-full sm:w-6/12 md:w-4/12 lg:w-3/12 px-4 animate-fade-in-delay-${index + 1}`}>
                 <div className="flex flex-col items-center">
                   <a href="#" className="mx-auto">
-                    <img className="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100" src={member.imageUrl} alt={member.name} />
+                    <img className="rounded-2xl drop-shadow-md hover:drop-shadow-xl transition-all duration-200 delay-100" src={member.imageUrl} alt={t(member.name)} />
                   </a>
                   <div className="text-center mt-6">
-                    <h4 className="text-gray-900 text-xl font-bold">{member.name}</h4>
-                    <p className="text-gray-700 font-light mb-2">{member.role}</p>
-                    <p className="text-sm text-gray-600">{member.description}</p>
+                    <h4 className="text-gray-900 text-xl font-bold">{t(member.name)}</h4>
+                    <p className="text-gray-700 font-light mb-2">{t(member.role)}</p>
+                    <p className="text-sm text-gray-600">{t(member.description)}</p>
                     {/* Social Icons */}
                     <div className="flex space-x-3 opacity-50 hover:opacity-100 transition-opacity duration-300 mt-4">
                       <a href={member.linkedinUrl} className="flex rounded-full hover:bg-indigo-50 h-10 w-10">
