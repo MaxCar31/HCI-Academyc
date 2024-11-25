@@ -11,12 +11,9 @@ import {
   
 
   
-//   type LessonTabsProps = {
-//     currentLesson: any; // Puedes ajustar el tipo según tus necesidades
-//     isExercise: boolean;
-//   };
+
   
-  export default function LessonTabs({ currentLesson, isExercise }: LessonTabsProps) {
+  export default function LessonTabs() {
     return (
       <Tabs defaultValue="detalles" className="flex-1">
         <TabsList className="px-6 bg-white">
