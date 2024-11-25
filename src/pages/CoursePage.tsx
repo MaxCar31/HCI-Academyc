@@ -1,209 +1,278 @@
-"use client"
 
 import { useState } from "react"
-import { Progress } from "@/components/ui/progress"
 import { Button } from "@/components/ui/button"
-import { Card, CardContent } from "@/components/ui/card"
+import { Progress } from "@/components/ui/progress"
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
+import { ScrollArea } from "@/components/ui/scroll-area"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { CheckCircle, PlayCircle, FileText, Download, Video, BookOpen } from 'lucide-react'
+import { Star, Clock, BookOpen, ChevronRight, PlayCircle, CheckCircle } from 'lucide-react'
+import { Link } from 'react-router-dom';
+import { motion } from "framer-motion"
 
-export default function CoursePage() {
-  const [progress] = useState(25)
+export default function CourseOverview() {
+
+  const [activeTab, setActiveTab] = useState("descripcion")
+
+  const courseData = {
+    title: "Español para principiantes: De cero a conversación",
+    description: "Este curso está diseñado para hablantes de turco que desean aprender español desde cero. A través de lecciones interactivas, ejercicios prácticos y recursos multimedia, desarrollarás habilidades fundamentales en español.",
+    rating: 4.8,
+    students: 1234,
+    lastUpdated: "Marzo 2024",
+    language: "Turco (con subtítulos en español)",
+    duration: "30 horas",
+    instructor: "Daniel Quispe",
+    progress: 7,
+  }
 
   const courseContent = [
     {
       id: 1,
-      title: "Introducción al español",
-      videoUrl: "https://example.com/video1.mp4",
-      duration: "10:00",
-      completed: true,
-      practices: [
-        { id: "1a", title: "Práctica de pronunciación", type: "quiz" },
-        { id: "1b", title: "Ejercicio de escritura", type: "writing" },
+      title: "Introducción al Español",
+      lessons: [
+        { id: 1, title: "Bienvenida al curso y objetivos", duration: "00:30:00", completed: false },
+        { id: 2, title: "El alfabeto español y pronunciación básica", duration: "01:00:00", completed: false },
+        { id: 3, title: "Sonidos especiales y comparaciones con el turco", duration: "01:00:00", completed: false },
+        { id: 4, title: "Ejercicio práctico de pronunciación", duration: "00:30:00", completed: false },
       ]
     },
     {
       id: 2,
-      title: "Saludos y presentaciones",
-      videoUrl: "https://example.com/video2.mp4",
-      duration: "15:30",
-      completed: true,
-      practices: [
-        { id: "2a", title: "Diálogo interactivo", type: "interactive" },
-        { id: "2b", title: "Quiz de vocabulario", type: "quiz" },
+      title: "Saludos y Presentaciones",
+      lessons: [
+        { id: 5, title: "Saludos y despedidas formales e informales", duration: "01:00:00", completed: false },
+        { id: 6, title: "Presentarse y presentar a otros", duration: "01:00:00", completed: false },
+        { id: 7, title: "Pronombres personales y verbos ser/estar", duration: "01:00:00", completed: false },
+        { id: 8, title: "Diálogos prácticos y role-play", duration: "01:00:00", completed: false },
       ]
     },
     {
       id: 3,
-      title: "Vocabulario básico",
-      videoUrl: "https://example.com/video3.mp4",
-      duration: "20:15",
-      completed: false,
-      practices: [
-        { id: "3a", title: "Juego de memoria", type: "game" },
-        { id: "3b", title: "Ejercicio de completar frases", type: "fill-in-blanks" },
+      title: "Números, Fechas y Horas",
+      lessons: [
+        { id: 9, title: "Números del 0 al 100", duration: "01:00:00", completed: false },
+        { id: 10, title: "Fechas, días de la semana y meses", duration: "01:00:00", completed: false },
+        { id: 11, title: "Decir la hora y expresiones temporales", duration: "01:00:00", completed: false },
       ]
     },
     {
       id: 4,
-      title: "Gramática: Artículos y sustantivos",
-      videoUrl: "https://example.com/video4.mp4",
-      duration: "25:00",
-      completed: false,
-      practices: [
-        { id: "4a", title: "Ejercicios de concordancia", type: "quiz" },
-        { id: "4b", title: "Práctica de traducción", type: "translation" },
+      title: "Vocabulario Básico y Expresiones Cotidianas",
+      lessons: [
+        { id: 12, title: "Colores, formas y tamaños", duration: "01:00:00", completed: false },
+        { id: 13, title: "Familia y relaciones", duration: "01:00:00", completed: false },
+        { id: 14, title: "Comida y bebida", duration: "01:00:00", completed: false },
+        { id: 15, title: "Ejercicios prácticos y juegos de vocabulario", duration: "01:00:00", completed: false },
       ]
     },
     {
       id: 5,
-      title: "Práctica de conversación",
-      videoUrl: "https://example.com/video5.mp4",
-      duration: "30:00",
-      completed: false,
-      practices: [
-        { id: "5a", title: "Simulación de diálogo", type: "roleplay" },
-        { id: "5b", title: "Ejercicio de comprensión auditiva", type: "listening" },
+      title: "Gramática Fundamental",
+      lessons: [
+        { id: 16, title: "Artículos definidos e indefinidos", duration: "01:00:00", completed: false },
+        { id: 17, title: "Género y número de los sustantivos", duration: "01:00:00", completed: false },
+        { id: 18, title: "Adjetivos calificativos y posesivos", duration: "01:00:00", completed: false },
+        { id: 19, title: "Concordancia entre sustantivos y adjetivos", duration: "01:00:00", completed: false },
       ]
     },
-  ]
+    {
+      id: 6,
+      title: "Verbos y Conjugaciones Básicas",
+      lessons: [
+        { id: 20, title: "Verbos regulares en presente (-ar, -er, -ir)", duration: "01:00:00", completed: false },
+        { id: 21, title: "Verbos irregulares comunes (ser, estar, tener, ir)", duration: "01:00:00", completed: false },
+        { id: 22, title: "Oraciones afirmativas, negativas e interrogativas", duration: "01:00:00", completed: false },
+        { id: 23, title: "Práctica de conjugación y ejercicios escritos", duration: "01:00:00", completed: false },
+      ]
+    },
+    {
+      id: 7,
+      title: "Comunicación en Situaciones Cotidianas",
+      lessons: [
+        { id: 24, title: "En el restaurante: ordenar comida", duration: "01:00:00", completed: false },
+        { id: 25, title: "Compras y precios", duration: "01:00:00", completed: false },
+        { id: 26, title: "Direcciones y transporte", duration: "01:00:00", completed: false },
+        { id: 27, title: "Role-play de situaciones reales", duration: "01:00:00", completed: false },
+      ]
+    },
+    {
+      id: 8,
+      title: "Lectura y Escritura Básica",
+      lessons: [
+        { id: 28, title: "Lectura de textos sencillos", duration: "01:00:00", completed: false },
+        { id: 29, title: "Comprensión lectora y vocabulario", duration: "01:00:00", completed: false },
+        { id: 30, title: "Redacción de oraciones y párrafos simples", duration: "01:00:00", completed: false },
+        { id: 31, title: "Corrección y retroalimentación", duration: "01:00:00", completed: false },
+      ]
+    },
+    {
+      id: 10,
+      title: "Evaluación y Cierre del Curso",
+      lessons: [
+        { id: 34, title: "Repaso general y aclaración de dudas", duration: "01:00:00", completed: false },
+        { id: 35, title: "Evaluación final y certificación", duration: "01:00:00", completed: false },
+      ]
+    },
+  ];
+  
 
   return (
     <div className="min-h-screen bg-slate-50">
+      {/* Navbar */}
       <header className="bg-white shadow-sm">
         <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <h1 className="text-2xl font-serif font-bold text-red-600">Español para principiantes</h1>
-          <Progress value={progress} className="w-1/3" />
-          <span className="text-slate-600">{progress}% completado</span>
+          <div className="flex items-center space-x-4">
+            <Link to="/">
+              <motion.h1
+                className="text-3xl font-serif font-bold text-red-600"
+                initial={{ opacity: 0, y: -20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.5 }}
+              >
+                LinguaTurk
+              </motion.h1>
+            </Link>
+          </div>
+          <div className="flex items-center space-x-4">
+            <motion.img
+              src="Curriculum.jpg"
+              alt="Usuario"
+              className="h-8 w-8 rounded-full"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 0.5 }}
+            />
+            <Button variant="ghost" className="text-slate-700 hover:text-red-600">
+              Mi Perfil
+            </Button>
+          </div>
         </div>
       </header>
-
+  
       <main className="container mx-auto px-4 py-8">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          <div className="md:col-span-2">
-            <div className="bg-white rounded-lg shadow-md p-6 mb-8">
-              <h2 className="text-2xl font-serif font-bold text-slate-800 mb-4">Contenido del curso</h2>
-              <Accordion type="single" collapsible className="w-full">
-                {courseContent.map((section) => (
-                  <AccordionItem value={`section-${section.id}`} key={section.id}>
-                    <AccordionTrigger className="hover:no-underline">
-                      <div className="flex items-center justify-between w-full">
-                        <div className="flex items-center">
-                          {section.completed ? (
-                            <CheckCircle className="text-green-500 mr-2" />
-                          ) : (
-                            <PlayCircle className="text-slate-400 mr-2" />
-                          )}
-                          <span className="text-slate-700">{section.title}</span>
-                        </div>
-                        <span className="text-slate-500 text-sm">{section.duration}</span>
-                      </div>
-                    </AccordionTrigger>
-                    <AccordionContent>
-                      <div className="pl-6 space-y-2">
-                        <div className="flex items-center text-slate-600">
-                          <Video className="mr-2" size={16} />
-                          <a href={section.videoUrl} className="hover:underline">Ver video de teoría</a>
-                        </div>
-                        {section.practices.map((practice) => (
-                          <div key={practice.id} className="flex items-center text-slate-600">
-                            <BookOpen className="mr-2" size={16} />
-                            <a href={`#practice-${practice.id}`} className="hover:underline">{practice.title}</a>
-                          </div>
-                        ))}
-                      </div>
-                    </AccordionContent>
-                  </AccordionItem>
-                ))}
-              </Accordion>
+          {/* Información principal del curso */}
+          <motion.div
+            className="md:col-span-2 space-y-6"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+          >
+            <h1 className="text-3xl font-bold text-slate-800">{courseData.title}</h1>
+            <p className="text-lg text-slate-600">{courseData.description}</p>
+  
+            <div className="flex items-center space-x-4">
+              <div className="flex items-center">
+                <Star className="text-yellow-400 w-5 h-5" />
+                <span className="ml-1 font-semibold">{courseData.rating}</span>
+              </div>
+              <span className="text-slate-500">({courseData.students} estudiantes)</span>
+              <span className="text-slate-500">Actualizado {courseData.lastUpdated}</span>
             </div>
-
-            <Tabs defaultValue="descripcion" className="bg-white rounded-lg shadow-md p-6">
+  
+            <div className="flex items-center space-x-4 text-slate-600">
+              <span className="flex items-center"><BookOpen className="mr-2" /> {courseData.language}</span>
+              <span className="flex items-center"><Clock className="mr-2" /> {courseData.duration}</span>
+            </div>
+  
+            <div className="flex items-center space-x-2">
+              <img src="/InstructorHome2.png" alt={courseData.instructor} className="h-12 w-12 rounded-full" />
+              <div>
+                <p className="font-semibold">Instructor</p>
+                <p className="text-slate-600">{courseData.instructor}</p>
+              </div>
+            </div>
+  
+            <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
               <TabsList>
-                <TabsTrigger value="descripcion">Descripción</TabsTrigger>
-                <TabsTrigger value="recursos">Recursos</TabsTrigger>
-                <TabsTrigger value="notas">Notas</TabsTrigger>
-                <TabsTrigger value="anuncios">Anuncios</TabsTrigger>
+                <TabsTrigger value="descripcion">Descripción del curso</TabsTrigger>
+                <TabsTrigger value="contenido">Contenido del curso</TabsTrigger>
               </TabsList>
-              <TabsContent value="descripcion">
-                <h3 className="text-xl font-bold mb-2">Acerca de este curso</h3>
-                <p className="text-slate-600">
-                  Este curso está diseñado específicamente para hablantes de turco que desean aprender español. 
-                  Cada sección incluye un video de teoría seguido de ejercicios prácticos interactivos. 
-                  Cubriremos los fundamentos del idioma, incluyendo gramática básica, vocabulario esencial y 
-                  práctica de conversación. Al final del curso, serás capaz de mantener conversaciones simples en español.
-                </p>
+              <TabsContent value="descripcion" className="mt-4">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Lo que aprenderás</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ul className="list-disc pl-5 space-y-2">
+                      <li>Fundamentos de la pronunciación española</li>
+                      <li>Vocabulario esencial para conversaciones cotidianas</li>
+                      <li>Gramática básica para construir oraciones simples</li>
+                      <li>Habilidades de comprensión auditiva y expresión oral</li>
+                    </ul>
+                  </CardContent>
+                </Card>
               </TabsContent>
-              <TabsContent value="recursos">
-                <h3 className="text-xl font-bold mb-2">Recursos del curso</h3>
-                <ul className="space-y-2">
-                  <li>
-                    <a href="#" className="flex items-center text-red-600 hover:underline">
-                      <FileText className="mr-2" /> Guía de estudio en PDF
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="flex items-center text-red-600 hover:underline">
-                      <Download className="mr-2" /> Fichas de vocabulario
-                    </a>
-                  </li>
-                  <li>
-                    <a href="#" className="flex items-center text-red-600 hover:underline">
-                      <FileText className="mr-2" /> Ejercicios de práctica adicionales
-                    </a>
-                  </li>
-                </ul>
-              </TabsContent>
-              <TabsContent value="notas">
-                <h3 className="text-xl font-bold mb-2">Tus notas</h3>
-                <textarea 
-                  className="w-full h-32 p-2 border rounded-md" 
-                  placeholder="Escribe tus notas aquí..."
-                ></textarea>
-              </TabsContent>
-              <TabsContent value="anuncios">
-                <h3 className="text-xl font-bold mb-2">Anuncios del curso</h3>
-                <div className="space-y-4">
-                  <div>
-                    <h4 className="font-bold">Nuevos videos de práctica disponibles</h4>
-                    <p className="text-slate-600">Hemos añadido nuevos videos de práctica para las secciones 3 y 4. ¡No olvides revisarlos!</p>
-                  </div>
-                  <div>
-                    <h4 className="font-bold">Próxima sesión en vivo de preguntas y respuestas</h4>
-                    <p className="text-slate-600">Únete a nuestra sesión de preguntas y respuestas el próximo viernes para resolver tus dudas sobre el curso.</p>
-                  </div>
-                </div>
+              <TabsContent value="contenido" className="mt-4">
+                <Card>
+                  <CardHeader>
+                    <CardTitle>Contenido del curso</CardTitle>
+                  </CardHeader>
+                  <CardContent>
+                    <ScrollArea className="h-[400px] pr-4">
+                      <Accordion type="single" collapsible className="w-full">
+                        {courseContent.map((section) => (
+                          <AccordionItem value={`section-${section.id}`} key={section.id}>
+                            <AccordionTrigger>{section.title}</AccordionTrigger>
+                            <AccordionContent>
+                              <ul className="space-y-2">
+                                {section.lessons.map((lesson) => (
+                                  <li key={lesson.id} className="flex items-center justify-between">
+                                    <div className="flex items-center">
+                                      {lesson.completed ? (
+                                        <CheckCircle className="w-4 h-4 text-green-500 mr-2" />
+                                      ) : (
+                                        <PlayCircle className="w-4 h-4 text-slate-400 mr-2" />
+                                      )}
+                                      <span>{lesson.title}</span>
+                                    </div>
+                                    <span className="text-slate-500 text-sm">{lesson.duration}</span>
+                                  </li>
+                                ))}
+                              </ul>
+                            </AccordionContent>
+                          </AccordionItem>
+                        ))}
+                      </Accordion>
+                    </ScrollArea>
+                  </CardContent>
+                </Card>
               </TabsContent>
             </Tabs>
-          </div>
-
-          <div>
-            <Card>
-              <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-4">Tu progreso</h3>
-                <Progress value={progress} className="mb-2" />
-                <p className="text-center text-slate-600 mb-4">{progress}% completado</p>
-                <Button className="w-full bg-red-600 hover:bg-red-700 text-white mb-4">
-                  Continuar aprendiendo
-                </Button>
-                <div className="space-y-2">
-                  <p className="flex items-center text-slate-600">
-                    <CheckCircle className="mr-2 text-green-500" /> 2 secciones completadas
-                  </p>
-                  <p className="flex items-center text-slate-600">
-                    <Video className="mr-2" /> 2 videos vistos
-                  </p>
-                  <p className="flex items-center text-slate-600">
-                    <BookOpen className="mr-2" /> 4 prácticas realizadas
-                  </p>
+          </motion.div>
+  
+          {/* Tarjeta de inscripción */}
+          <motion.div
+            className="md:col-span-1"
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            <Card className="sticky top-4">
+              <CardHeader>
+                <CardTitle className="text-2xl font-bold">Comienza tu aprendizaje hoy</CardTitle>
+                <CardDescription>Acceso completo al curso</CardDescription>
+              </CardHeader>
+              <CardContent>
+                <div className="mb-4">
+                  <Progress value={courseData.progress} className="w-full" />
+                  <p className="text-sm text-slate-600 mt-2">{courseData.progress}% completado</p>
                 </div>
+                <Link to="/CoursePlayer">
+                  <Button className="w-full text-lg">
+                    Continuar aprendiendo <ChevronRight className="ml-2" />
+                  </Button>
+                </Link>
               </CardContent>
+              <CardFooter>
+                <p className="text-sm text-slate-600 text-center w-full">
+                  30 días de garantía de devolución del dinero
+                </p>
+              </CardFooter>
             </Card>
-          </div>
+          </motion.div>
         </div>
       </main>
     </div>
-  )
-}
-
+  )}
