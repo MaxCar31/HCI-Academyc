@@ -47,7 +47,7 @@ export default function CoursePlayer() {
           <LessonNavigation progress={progress} />
 
           {/* Pestañas de Contenido */}
-          <LessonTabs currentLesson={currentLesson} isExercise={isExercise} />
+          <LessonTabs/>
         </div>
 
         {/* Barra Lateral del Curso */}
