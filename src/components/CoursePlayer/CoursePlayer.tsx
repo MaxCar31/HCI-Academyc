@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import Navbar from '@/components/CoursePlayer/Components/Navbar';
-// import VideoPlayer from '@/components/CoursePlayer/Components/VideoPlayer';
+import VideoPlayer from '@/components/CoursePlayer/Components/VideoPlayer';
 import LessonNavigation from '@/components/CoursePlayer/Components/LessonNavigation';
 import LessonTabs from '@/components/CoursePlayer/Components/LessonTabs';
 import Sidebar from '@/components/CoursePlayer/Components/Sidebar';
@@ -41,8 +41,8 @@ export default function CoursePlayer() {
         <div className="flex-1 flex flex-col">
           {/* Video o Ejercicios */}
           {!isExercise ? (
-            // <VideoPlayer currentLesson={currentLesson} />
-            <EjercicioSonidos />
+            <VideoPlayer currentLesson={currentLesson} />
+            
           ) : (
             <div className="p-6">
               <h2 className="text-2xl font-bold mb-4">{currentLesson.title}</h2>
