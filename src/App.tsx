@@ -1,5 +1,5 @@
 import { Routes, Route, useLocation } from 'react-router-dom';
-// import Home from './components/Home/home';
+import Home from './components/Home/home';
 import CourseOverview from './components/CoursePage/CourseOverview';
 import CoursePlayer from './components/CoursePlayer/CoursePlayer';
 import { useLoadingAnimation } from './Hooks/useLoadingSpinner';
@@ -27,7 +27,7 @@ function App() {
       <div>
         {isLoading && <Loading />}
         <Routes>
-          <Route path="/" element={<RegisterPage />} />
+          <Route path="/" element={<Home/>} />
           <Route path="/CoursePage" element={<CourseOverview />} />
           <Route path="/CoursePlayer" element={<CoursePlayer />} />
           <Route path="/Login" element={<RegisterPage />} />
