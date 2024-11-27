@@ -27,7 +27,7 @@ function App() {
       <div>
         {isLoading && <Loading />}
         <Routes>
-          <Route path="/" element={<Loading />} />
+          <Route path="/" element={<RegisterPage />} />
           <Route path="/CoursePage" element={<CourseOverview />} />
           <Route path="/CoursePlayer" element={<CoursePlayer />} />
           <Route path="/Login" element={<RegisterPage />} />
