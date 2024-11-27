@@ -4,22 +4,24 @@ import VideoPlayer from '@/components/CoursePlayer/Components/VideoPlayer';
 import LessonNavigation from '@/components/CoursePlayer/Components/LessonNavigation';
 import LessonTabs from '@/components/CoursePlayer/Components/LessonTabs';
 import Sidebar from '@/components/CoursePlayer/Components/Sidebar';
-import { courseContent } from '@/data/courseContent';
+import { courseContent, Lesson } from '@/data/courseContent';
 import EjercicioSonidos from '@/components/CoursePlayer/Components/EjercicioSonidos';
+import { useTranslation } from 'react-i18next';
 
 export default function CoursePlayer() {
+  const { t } = useTranslation();
 
+  // Encuentra la lección específica
+  const initialLesson: Lesson = courseContent[0].lessons.find(lesson => lesson.id === 3) || courseContent[0].lessons[0];
 
-  const initialLesson = courseContent[0].lessons.find(lesson => lesson.id === 3);
-
-  const [currentLesson, setCurrentLesson] = useState(initialLesson);
+  const [currentLesson, setCurrentLesson] = useState<Lesson>(initialLesson);
   const [isExercise, setIsExercise] = useState(false);
   const [progress] = useState(15);
 
   const setCurrentExercise = (section: any) => {
     setCurrentLesson({
       id: -1,
-      title: `Ejercicios - ${section.title}`,
+      title: `${t('coursePlayer.exerciseTitle')} - ${section.title}`,
       duration: '0:00',
       completed: false,
       type: 'exercise',
@@ -51,7 +53,7 @@ export default function CoursePlayer() {
           <LessonNavigation progress={progress} />
 
           {/* Pestañas de Contenido */}
-          <LessonTabs/>
+          <LessonTabs />
         </div>
 
         {/* Barra Lateral del Curso */}
