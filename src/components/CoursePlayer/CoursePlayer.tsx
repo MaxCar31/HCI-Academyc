@@ -8,7 +8,11 @@ import { courseContent } from '@/data/courseContent';
 import EjercicioSonidos from '@/components/CoursePlayer/Components/EjercicioSonidos';
 
 export default function CoursePlayer() {
-  const [currentLesson, setCurrentLesson] = useState(courseContent[0].lessons[0]);
+
+
+  const initialLesson = courseContent[0].lessons.find(lesson => lesson.id === 3);
+
+  const [currentLesson, setCurrentLesson] = useState(initialLesson);
   const [isExercise, setIsExercise] = useState(false);
   const [progress] = useState(15);
 
